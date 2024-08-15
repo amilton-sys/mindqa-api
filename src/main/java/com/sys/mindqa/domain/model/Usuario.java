@@ -28,4 +28,5 @@ public class Usuario {
     private Assinatura assinatura;
     @OneToOne
     private ProjetoDeTeste projetoDeTeste;
+
 }
