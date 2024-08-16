@@ -7,10 +7,7 @@ Como analista de qualidade, desejo um sistema de gerenciamento de qualidade de s
 | Data           | Autor   | Observação                                                        |
 |----------------|---------|-------------------------------------------------------------------|
 | 10 de ago. 2024 | Amilton | Criação da documentação                                          |
-| 12 de ago. 2024 | Amilton | Criação do diagrama de classes                                   |
-| 13 de ago. 2024 | Amilton | Criação do DER                                                   |
-| 15 de ago. 2024 | Amilton | Criação do projeto da API Github -> MindQa-API                   |
-| 15 de ago. 2024 | Amilton | Criação das entidades e seus repositorios de persistencia da API |
+
 
 
 ## Requisitos Funcionais
