@@ -17,7 +17,6 @@ public class Assinatura {
     private Integer id;
     @Enumerated(EnumType.STRING)
     private TipoPlano tipo;
-    @Column(columnDefinition = "MONEY")
     private BigDecimal valor;
     private LocalDate dataInicio;
     private LocalDate dataFim;

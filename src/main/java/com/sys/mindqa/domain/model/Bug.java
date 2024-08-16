@@ -16,11 +16,8 @@ public class Bug {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(nullable = false, length = 100)
     private String titulo;
-    @Column(nullable = false, columnDefinition = "TEXT")
     private String descricao;
-    @Column(nullable = false, columnDefinition = "TEXT")
     private String passos;
     @Enumerated(EnumType.STRING)
     private StatusBug status;
@@ -28,4 +25,7 @@ public class Bug {
     private LocalDate dataReporte;
     @UpdateTimestamp
     private LocalDate dataAtualizacao;
+    @ManyToOne
+    @JoinColumn(name = "projeto_id")
+    private ProjetoDeTeste projetoDeTeste;
 }
