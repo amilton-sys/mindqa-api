@@ -16,7 +16,6 @@ public class Execucao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(nullable = false, columnDefinition = "TEXT")
     private String observacao;
     @Enumerated(EnumType.STRING)
     private StatusExecucao statusExecucao;
@@ -24,6 +23,13 @@ public class Execucao {
     @Enumerated(EnumType.STRING)
     private TipoExecucao tipoExecucao;
     private LocalDate dataExecucao;
-    @OneToMany
+    @ManyToMany
+    @JoinTable(name = "execucao_caso_de_teste",
+            joinColumns = @JoinColumn(name = "execucao_id"),
+            inverseJoinColumns = @JoinColumn(name = "caso_de_teste_id")
+    )
     private List<CasoDeTeste> casoDeTeste;
+    @ManyToOne
+    @JoinColumn(name = "projeto_id")
+    private ProjetoDeTeste projetoDeTeste;
 }

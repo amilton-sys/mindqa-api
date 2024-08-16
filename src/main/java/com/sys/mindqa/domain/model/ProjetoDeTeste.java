@@ -16,20 +16,19 @@ public class ProjetoDeTeste {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(unique = true, length = 100, nullable = false)
     private String nome;
-    @Column(nullable = false, columnDefinition = "TEXT")
     private String descricao;
-    @Column(nullable = false)
     private Long versao;
     @CreationTimestamp
     private LocalDate dataCricao;
-    @OneToMany
+    @OneToMany(mappedBy = "projetoDeTeste")
     private List<PlanoDeTeste> planosDeTeste;
-    @OneToMany
+    @OneToMany(mappedBy = "projetoDeTeste")
     private List<CasoDeTeste> casoDeTestes;
-    @OneToMany
+    @OneToMany(mappedBy = "projetoDeTeste")
     private List<Execucao> execucoes;
-    @OneToMany
+    @OneToMany(mappedBy = "projetoDeTeste")
     private List<Bug> bugs;
+    @OneToMany(mappedBy = "projetoDeTeste")
+    private List<Usuario> usuarios;
 }
