@@ -16,9 +16,7 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(unique = true, nullable = false, length = 90)
     private String email;
-    @Column(nullable = false, length = 90)
     private String password;
     @CreationTimestamp
     private LocalDate dataCriacao;
@@ -26,7 +24,8 @@ public class Usuario {
     private LocalDate dataAtualizacao;
     @ManyToOne
     private Assinatura assinatura;
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "projeto_id")
     private ProjetoDeTeste projetoDeTeste;
 
 }
