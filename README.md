@@ -4,12 +4,14 @@
 Como analista de qualidade, desejo um sistema de gerenciamento de qualidade de software no qual eu possa elaborar planos de testes, criar casos de testes, executar casos de testes de forma manual e automatizada, reportar bugs, catalogar bugs e gerar relatórios sobre a criação dos casos de teste, execução, reports de bugs, correções e geração de projeto de testes automatizados com casos de testes pré-criados, tudo de forma simples e reutilizável.
 
 ## Histórico de Mudanças
-| Data           | Autor   | Observação                                 |
-|----------------|---------|--------------------------------------------|
-| 10 de ago. 2024 | Amilton | Criação da documentação                    |
-| 12 de ago. 2024 | Amilton | Criação do diagrama de classes             |
-| 13 de ago. 2024 | Amilton | Criação do DER                             |
-| 15 de ago. 2024 | Amilton | Criação do projeto da API Github -> MindQa-API |
+| Data           | Autor   | Observação                                                        |
+|----------------|---------|-------------------------------------------------------------------|
+| 10 de ago. 2024 | Amilton | Criação da documentação                                          |
+| 12 de ago. 2024 | Amilton | Criação do diagrama de classes                                   |
+| 13 de ago. 2024 | Amilton | Criação do DER                                                   |
+| 15 de ago. 2024 | Amilton | Criação do projeto da API Github -> MindQa-API                   |
+| 15 de ago. 2024 | Amilton | Criação das entidades e seus repositorios de persistencia da API |
+
 
 ## Requisitos Funcionais
 ### Criar Conta
