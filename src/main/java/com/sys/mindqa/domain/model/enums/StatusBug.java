@@ -1,4 +1,4 @@
-package com.sys.mindqa.domain.model;
+package com.sys.mindqa.domain.model.enums;
 
 public enum StatusBug {
     PENDENTE,

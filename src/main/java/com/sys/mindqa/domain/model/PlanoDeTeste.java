@@ -20,6 +20,7 @@ public class PlanoDeTeste {
     private String escopo;
     private String criterioDeAceitacao;
     private String recursos;
+    private String riscos;
     @CreationTimestamp
     private LocalDate dataInicio;
     @UpdateTimestamp
