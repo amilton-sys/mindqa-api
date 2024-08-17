@@ -18,7 +18,6 @@ public class ProjetoDeTeste {
     private Integer id;
     private String nome;
     private String descricao;
-    @Column(nullable = false)
     private Long versao;
     @CreationTimestamp
     private LocalDate dataCricao;

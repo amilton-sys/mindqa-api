@@ -23,7 +23,7 @@ public class Usuario {
     @UpdateTimestamp
     private LocalDate dataAtualizacao;
     @ManyToOne
-    private Assinatura assinatura;
+    private Plano plano;
     @ManyToOne
     @JoinColumn(name = "projeto_id")
     private ProjetoDeTeste projetoDeTeste;
