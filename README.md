@@ -12,7 +12,7 @@ Como analista de qualidade, desejo um sistema de gerenciamento de qualidade de s
 ## Requisitos Funcionais
 
 ### Criar Conta:
-- Permitir que novos usuários se registrem no sistema fornecendo informações como nome, email (que deve ser único), senha e grupo (Líder, Membro).
+- Permitir que novos usuários se registrem no sistema fornecendo informações como nome, email (que deve ser único), senha e papel (Líder, Membro).
 - Enviar um email de confirmação para ativar a conta.
 
 ### Planos de Assinatura:
