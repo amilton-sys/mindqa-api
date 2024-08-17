@@ -1,5 +1,7 @@
 package com.sys.mindqa.domain.model;
 
+import com.sys.mindqa.domain.model.enums.StatusExecucao;
+import com.sys.mindqa.domain.model.enums.TipoExecucao;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

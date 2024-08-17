@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -17,10 +18,15 @@ public class ProjetoDeTeste {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
-    private String descricao;
-    private Long versao;
+    private String objetivo;
+    private String metas;
+    private String ferramenta;
+    private String estrategia;
+    private int versao;
     @CreationTimestamp
-    private LocalDate dataCricao;
+    private LocalDate dataCriacao;
+    @UpdateTimestamp
+    private LocalDate dataAtualizacao;
     @OneToMany(mappedBy = "projetoDeTeste")
     private List<PlanoDeTeste> planosDeTeste;
     @OneToMany(mappedBy = "projetoDeTeste")
@@ -30,5 +36,5 @@ public class ProjetoDeTeste {
     @OneToMany(mappedBy = "projetoDeTeste")
     private List<Bug> bugs;
     @OneToMany(mappedBy = "projetoDeTeste")
-    private List<Usuario> usuarios;
+    private List<Usuario> equipe;
 }

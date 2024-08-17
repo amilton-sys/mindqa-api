@@ -1,5 +1,6 @@
 package com.sys.mindqa.domain.model;
 
+import com.sys.mindqa.domain.model.enums.TipoPlano;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

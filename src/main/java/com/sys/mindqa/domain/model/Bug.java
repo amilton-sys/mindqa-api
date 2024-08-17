@@ -1,5 +1,7 @@
 package com.sys.mindqa.domain.model;
 
+import com.sys.mindqa.domain.model.enums.Prioridade;
+import com.sys.mindqa.domain.model.enums.StatusBug;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -18,7 +20,12 @@ public class Bug {
     private Integer id;
     private String titulo;
     private String descricao;
-    private String passos;
+    @Enumerated(EnumType.STRING)
+    private Prioridade prioridade;
+    private String resultadoEsperado;
+    private String resultadoAtual;
+    private String evidenciaUrl;
+    private String observacao;
     @Enumerated(EnumType.STRING)
     private StatusBug status;
     @CreationTimestamp
