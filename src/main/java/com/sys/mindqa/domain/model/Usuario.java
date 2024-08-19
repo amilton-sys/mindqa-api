@@ -1,5 +1,6 @@
 package com.sys.mindqa.domain.model;
 
+import com.sys.mindqa.domain.dto.CadastradoDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -37,5 +38,4 @@ public class Usuario {
     @ManyToOne
     @JoinColumn(name = "projeto_id")
     private ProjetoDeTeste projetoDeTeste;
-
 }
