@@ -11,6 +11,87 @@ Como analista de qualidade, desejo um sistema de gerenciamento de qualidade de s
 
 ## Requisitos Funcionais
 
+## Diagrama de Classes
+
+```mermaid
+erDiagram
+    ProjetoDeTeste {
+        String nome
+        String objetivo
+        String metas
+        String ferramenta
+        String estrategia
+        int versao
+        LocalDate dataCriacao
+        LocalDate dataAtualizacao
+    }
+    
+    Usuario {
+        String nome
+        String email
+        String senha
+        LocalDate dataCriacao
+        LocalDate dataAtualizacao
+    }
+    
+    Plano {
+        Enum tipo
+        BigDecimal valor
+        LocalDate dataInicio
+        LocalDate dataFim
+    }
+    
+    Papel {
+        String nome
+        Enum tipo
+    }
+    
+    PlanoDeTeste {
+        String escopo
+        String objetivo
+        String criterio
+        Enum tipos
+        String recurso
+        String risco
+        LocalDate dataInicio
+        LocalDate dataFim
+    }
+    
+    CasoDeTeste {
+        String titulo
+        String preCondicao
+        String descricao
+        String dados
+        String resultadoEsperado
+        String criterio
+        Enum statusCaso
+        LocalDate dataCriacao
+        LocalDate dataAtualizacao
+    }
+    
+    Bug {
+        String titulo
+        String descricao
+        Enum prioridade
+        String resultadoEsperado
+        String resultadoAtual
+        String evidenciaUI
+        String observacao
+        Enum statusBug
+        LocalDate dataCriacao
+        LocalDate dataAtualizacao
+    }
+    
+    ProjetoDeTeste ||--o{ PlanoDeTeste : "1..* possui 1..*"
+    ProjetoDeTeste ||--o{ CasoDeTeste : "1..* possui 1..*"
+    Usuario ||--o{ ProjetoDeTeste : "1..* cria 0..*"
+    Usuario ||--o{ PlanoDeTeste : "1..* executa 0..*"
+    PlanoDeTeste ||--o{ CasoDeTeste : "1..* possui 0..*"
+    CasoDeTeste ||--o{ Bug : "0..* possui 0..*"
+    Usuario ||--o{ Plano : "1 assina 0..*"
+    Usuario ||--o{ Papel : "1 possui 0..*"
+```
+
 ### Criar Conta:
 - Permitir que novos usuários se registrem no sistema fornecendo informações como nome, email (que deve ser único), senha e papel (Líder, Membro).
 - Enviar um email de confirmação para ativar a conta.
